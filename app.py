@@ -42,7 +42,7 @@ def register():
 
         con, cursor = get_db()
 
-        cursor.execute("SELECT id FROM users WHERE email=%s", (email,))
+        cursor.execute("SELECT id FROMusers WHERE email=%s", (email,))
         if cursor.fetchone():
             flash("User already exists")
             cursor.close()
